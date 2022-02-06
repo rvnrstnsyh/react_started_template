@@ -17,7 +17,7 @@ Or if you use yarn:
 ```
 ~# yarn install
 ```
-**If you use my package.json file, note that to start the development server "npm dev" not "npm start".**
+**If you use my package.json file, note that to start the development server "npm run dev" not "npm run start".**
 
 ## License
 
