@@ -1,0 +1,254 @@
+/* Root */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: none;
+}
+
+@font-face {
+  font-family: "Rounded Elegance";
+  src: url("../assets/font/Rounded_Elegance.ttf") format("truetype");
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+/* End root */
+
+/* Navigation */
+.react_navigation {
+  width: 100%;
+  display: flex;
+  position: fixed;
+  justify-content: flex-end;
+  background: #61dafb;
+}
+
+.react_navigation span {
+  padding: 5px;
+}
+
+.react_navigation span a {
+  color: white;
+}
+
+.react_navigation span a:hover {
+  color: #282c34;
+}
+
+.react_navigation span .active {
+  color: #282c34;
+}
+.redux_navigation {
+  width: 100%;
+  display: flex;
+  position: fixed;
+  justify-content: flex-end;
+  background: #764abc;
+}
+
+.redux_navigation span {
+  padding: 5px;
+}
+
+.redux_navigation span a {
+  color: white;
+}
+
+.redux_navigation span a:hover {
+  color: #282c34;
+}
+
+.redux_navigation span .active {
+  color: #282c34;
+}
+
+a {
+  text-decoration: none;
+}
+/* End navigation */
+
+/* Views */
+.container {
+  text-align: center;
+}
+
+.logo {
+  height: 30vmin;
+  pointer-events: none;
+}
+
+.redux_logo {
+  height: 25vmin;
+  pointer-events: none;
+  margin-top: 20px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo {
+    animation: Home_logo_spin infinite 25s linear;
+  }
+
+  .redux_logo {
+    animation: Home_logo_spin infinite 25s linear;
+  }
+}
+
+.header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  font-family: "Rounded Elegance";
+}
+
+.content {
+  text-align: center;
+}
+
+.email {
+  margin-top: 20px;
+}
+
+.title {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.api_url {
+  font-size: 0.7em;
+  margin-top: 5px;
+  margin-bottom: -5px;
+  color: #61dafb;
+}
+
+.api_url a {
+  color: #764abc;
+}
+
+.api_url a:hover {
+  color: #61dafb;
+}
+
+.description {
+  font-size: 0.8em;
+}
+
+.link {
+  color: #61dafb;
+}
+
+.button {
+  cursor: pointer;
+}
+
+.counter {
+  position: absolute;
+  top: 83%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+ul {
+  margin-top: 20px;
+  text-align: start;
+  list-style: square;
+}
+
+@keyframes Home_logo_spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .redux_logo {
+    margin-top: 50px;
+  }
+  .email,
+  .title {
+    font-size: 1.5em;
+  }
+
+  .content h2 {
+    font-size: 1.2em;
+  }
+
+  .description {
+    font-size: 0.6em;
+  }
+}
+/* End views */
+
+/* Users table */
+.users_list table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.users_list table tr {
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+.users_list table th,
+.users_list table td {
+  text-align: start;
+  padding: 10px;
+}
+.users_list table td {
+  font-size: 12px;
+}
+.users_list table th {
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 640px) {
+  .account__power {
+    text-align: end;
+  }
+  .users_list table {
+    border: 0;
+  }
+  .users_list table thead {
+    display: none;
+  }
+  .users_list table tr {
+    border-bottom: 2px solid #ddd;
+    display: block;
+    margin-bottom: 10px;
+  }
+  .users_list table td {
+    border-bottom: 1px dotted #ccc;
+    display: block;
+    font-size: 13px;
+    text-align: right;
+  }
+  .users_list table td:last-child {
+    border-bottom: 0;
+  }
+  .users_list table td:before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+/* End users table */
